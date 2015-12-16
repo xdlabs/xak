@@ -1,0 +1,17 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xenondigilabs</groupId>
+    <artifactId>xdk</artifactId>
+    <version>1.0.0</version>
+    <name>Xenon Development Kit</name>
+    <description>Libraries developed and used at Xenon DigiLabs.</description>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>persistence</module>
+    </modules>
+
+</project>
