@@ -1,2 +1,2 @@
-# XDK
-Xenon Development Kit
+# XAK
+Xenon App Kit - Libraries developed and used at Xenon DigiLabs

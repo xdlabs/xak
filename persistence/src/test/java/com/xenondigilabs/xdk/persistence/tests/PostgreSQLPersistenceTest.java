@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 public class PostgreSQLPersistenceTest extends TestCase{
 
     public void testSimple(){
-        
+
     }
 
 }
