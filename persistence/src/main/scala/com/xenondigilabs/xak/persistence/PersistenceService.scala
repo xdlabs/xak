@@ -1,23 +1,27 @@
 package com.xenondigilabs.xak.persistence
 
+import java.util.Collection
+import javax.jdo.PersistenceManager
 import javax.jdo.Query
 
 import com.xenondigilabs.xak.persistence.entity.PersistentEntity
 
 trait PersistenceService{
 
-  def PersistenceService(persistentEntityClass: Class)
+  def setPersistenceManager(persistence_manager: PersistenceManager): Unit
 
-  def create(persistentEntity: PersistentEntity): PersistentEntity;
+  def getPersistenceManager(): PersistenceManager
 
-  def create(persistentEntities: Array[PersistentEntity]): Array[PersistentEntity];
+  def create(persistent_entity: PersistentEntity): Boolean;
 
-  def read(): Iterator[PersistentEntity];
+  def create(persistent_entities: Collection[PersistentEntity]): Boolean;
 
-  def read(query: Query): Iterator[PersistentEntity];
+  def read(query: Query[Object]): List[PersistentEntity];
 
-  def delete(persistentEntity: PersistentEntity): Unit;
+  def delete(persistent_entity: PersistentEntity): Boolean;
 
-  def delete(query: Query): Unit;
+  def delete(query: Collection[PersistentEntity]): Boolean;
+
+  def delete(query: Query[Object]): Boolean;
 
 }
