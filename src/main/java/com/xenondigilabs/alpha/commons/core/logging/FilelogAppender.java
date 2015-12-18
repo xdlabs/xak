@@ -9,29 +9,27 @@ import java.io.IOException;
 public class FilelogAppender implements LogAppender{
 
 	
-	String filename="";
+	BufferedWriter bw =null;
 	public void append(String log) {
 		
+		 try {
+			bw.write(log);
+			bw.flush();
+		} catch (IOException e) {}
+	}
+	
+	public FilelogAppender() {}
+	
+	public FilelogAppender(String filepath)
+	{
 		try {
-		      File file = new File("/home/spring/Desktop/"+filename);
-		      
+		      File file = new File(filepath);
 		      // if file doesnt exists, then create it
 				if (!file.exists()) {
 					file.createNewFile();
 				}
 		      FileWriter fw = new FileWriter(file.getAbsoluteFile(),true);
-			  BufferedWriter bw = new BufferedWriter(fw);
-			  bw.write(log);
-		      bw.close();
-		} catch (IOException e) {
-		      e.printStackTrace();
-		}
-	}
-	
-	public FilelogAppender() {}
-	
-	public FilelogAppender(String name)
-	{
-		this.filename=name;
+			  bw = new BufferedWriter(fw);
+		} catch (IOException e) {}
 	}
 }
