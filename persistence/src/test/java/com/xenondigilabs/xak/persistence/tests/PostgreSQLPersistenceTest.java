@@ -1,4 +1,4 @@
-package com.xenondigilabs.xdk.persistence.tests;
+package com.xenondigilabs.xak.persistence.tests;
 
 import junit.framework.TestCase;
 
