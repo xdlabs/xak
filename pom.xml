@@ -3,15 +3,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xenondigilabs</groupId>
-    <artifactId>xdk</artifactId>
+    <artifactId>xak</artifactId>
     <version>1.0.0</version>
-    <name>Xenon Development Kit</name>
+    <name>Xenon App Kit</name>
     <description>Libraries developed and used at Xenon DigiLabs.</description>
 
     <packaging>pom</packaging>
 
     <modules>
         <module>persistence</module>
+        <module>examples</module>
     </modules>
 
 </project>

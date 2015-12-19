@@ -4,10 +4,12 @@
 
     <parent>
         <groupId>com.xenondigilabs</groupId>
-        <artifactId>xdk</artifactId>
+        <artifactId>xak</artifactId>
         <version>1.0.0</version>
+        <relativePath>../</relativePath>
     </parent>
 
+    <groupId>com.xenondigilabs.xak</groupId>
     <artifactId>persistence</artifactId>
     <name>Persistence</name>
     <properties>

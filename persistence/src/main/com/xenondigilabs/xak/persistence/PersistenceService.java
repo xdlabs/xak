@@ -29,7 +29,7 @@ public class PersistenceService{
      * @param entity
      * @return
      */
-    Object insert(Object entity){
+    public Object insert(Object entity){
 
         // Get current transaction from PersistenceManager
         Transaction transaction = persistence_manager.currentTransaction();
@@ -61,7 +61,7 @@ public class PersistenceService{
      * @param entities
      * @return
      */
-    Collection<Object> insert(Collection<Object> entities){
+    public Collection<Object> insert(Collection<Object> entities){
 
         // Get current transaction from PersistenceManager
         Transaction transaction = persistence_manager.currentTransaction();
@@ -94,7 +94,7 @@ public class PersistenceService{
      * Support for executing queries in PDO way.
      * @return
      */
-    Query newQuery(){
+    public Query newQuery(){
         // Get and return new query instance from PersistenceManager
         return persistence_manager.newQuery();
     }
@@ -104,7 +104,7 @@ public class PersistenceService{
      * @param entity_class
      * @return
      */
-    Query newQuery(Class entity_class){
+    public Query newQuery(Class entity_class){
         // Get and return new query instance for entity_class from PersistenceManager
         return persistence_manager.newQuery(entity_class);
     }
@@ -114,7 +114,7 @@ public class PersistenceService{
      * @param entity
      * @return
      */
-    Object getObjectId(Object entity){
+    public Object getObjectId(Object entity){
         // Fetch and return JDO ObjectId for object
         return persistence_manager.getObjectId(entity);
     }
@@ -125,7 +125,7 @@ public class PersistenceService{
      * @param mapping
      * @return
      */
-    Collection<Object> find(Class entity_class, Map<String, Object> mapping){
+    public Collection<Object> find(Class entity_class, Map<String, Object> mapping){
         // Generate JDOQL query from key-value Map
         String jdoql_query = JDOQLUtils.mapToJDOQL(mapping);
         // Find and return matching results.
@@ -138,7 +138,7 @@ public class PersistenceService{
      * @param jdoql_query
      * @return
      */
-    Collection<Object> find(Class entity_class, String jdoql_query){
+    public Collection<Object> find(Class entity_class, String jdoql_query){
         // Create new query from PersistenceManager
         Query query = persistence_manager.newQuery(entity_class, jdoql_query);
         // Get current transaction
@@ -172,7 +172,7 @@ public class PersistenceService{
      * Alias for PersistenceManager.deletePersistent(Object)
      * @param entity
      */
-    void remove(Object entity){
+    public void remove(Object entity){
 
         // Get current transaction from PersistenceManager
         Transaction transaction = persistence_manager.currentTransaction();
@@ -199,7 +199,7 @@ public class PersistenceService{
      * Alias for PersistenceManager.deletePersistentAll(List[Object])
      * @param entities
      */
-    void remove(Collection<Object> entities){
+    public void remove(Collection<Object> entities){
 
         // Get current transaction from PersistenceManager
         Transaction transaction = persistence_manager.currentTransaction();
@@ -228,7 +228,7 @@ public class PersistenceService{
      * Shortcut method for 'find() and remove()'
      * @param mapping
      */
-    void remove(Class entity_class, Map<String, Object> mapping){
+    public void remove(Class entity_class, Map<String, Object> mapping){
         // Find matching objects
         Collection<Object> entities = this.find(entity_class, mapping);
         // Delete matching persistent objects
@@ -240,7 +240,7 @@ public class PersistenceService{
      * @param entity_class
      * @param jdoql_query
      */
-    void remove(Class entity_class, String jdoql_query){
+    public void remove(Class entity_class, String jdoql_query){
         // Find objects that fits for query
         Collection<Object> entities = this.find(entity_class, jdoql_query);
         // Delete matching objects
