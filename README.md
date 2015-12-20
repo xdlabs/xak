@@ -3,6 +3,8 @@ Xenon App Kit - Libraries developed and used at Xenon DigiLabs
 
 --------------------------------------------------------------
 
+[![Build Status](http://ci.xenondigilabs.com/job/Xenon%20App%20Kit/badge/icon)](http://ci.xenondigilabs.com/job/Xenon%20App%20Kit/)
+
 ### Components
 
 * [Persistence](persistence/)
