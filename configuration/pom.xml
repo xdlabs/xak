@@ -10,14 +10,14 @@
     </parent>
 
     <groupId>com.xenondigilabs.xak</groupId>
-    <artifactId>persistence</artifactId>
-    <name>Persistence</name>
+    <artifactId>configuration</artifactId>
+    <name>Configuration</name>
 
     <dependencies>
         <dependency>
-            <groupId>javax.jdo</groupId>
-            <artifactId>jdo-api</artifactId>
-            <version>3.1</version>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.5</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

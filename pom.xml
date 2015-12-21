@@ -11,6 +11,8 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>configuration</module>
+        <module>logging</module>
         <module>persistence</module>
         <module>examples</module>
     </modules>
