@@ -4,56 +4,22 @@ import java.util.Properties;
 
 public class Configuration {
 	
+	//config attribute to add multiple configuration
+	 static Properties config=new  Properties();
 	
-	 static java.util.Properties config=new  Properties();
-	
+	 
 	 static void add(ConfigurationProvider provider){
-		for (Object key : provider.keys()) {
+		 
+		 //Iterate over provider,to get keys and values
+		 for (Object key : provider.keys()) {
 			String propertykey=key.toString();
-			String value=provider.get(key.toString());
-			config.setProperty(propertykey, value);
+			String value=provider.get(key.toString());//Get value corresponding key
+			config.setProperty(propertykey, value);//set key and values inside config provider
 		}
 	}
-	static String get(String key )  //  return the value for `key`
+	//Get value corresponding key of any file (.properties,.yaml) 
+	static String get(String key ) 
 	{
 		 return config.getProperty(key);
 	}
-
-	 
-	
-		/*
-	// To read configs like abc.properties
-
-	class PropertiesConfiguration extends ConfigurationProvider{
-
-		PropertiesConfiguation( properties_file_path )
-
-	}
-
-	// To read abc.yaml files
-
-	class YAMLConfiguration extends ConfiguratonProvider{
-
-		YAMLConfiguration( yaml_file_path )
-
-	}
-
-	AND SO ON
-
-
-	---------------
-	Use case:
-	---------------
-
-
-	PropertiesCOnfiguration pc = new PropertiesCOnfiguration( amc.properties )
-	PropertiesCOnfiguration pc2 = new PropertiesCOnfiguration( another_file.properties )
-
-	Configuration.add( pc )
-	Configuration.add( pc2 )
-
-	var host = Configuration.get( 'server.host' )
-
-	//  So, we get one Configuration which reads from multiple and heterogeneous files.
-*/
 }

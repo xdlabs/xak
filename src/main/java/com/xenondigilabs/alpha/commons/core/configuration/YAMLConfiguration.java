@@ -1,31 +1,41 @@
 package com.xenondigilabs.alpha.commons.core.configuration;
 
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
-public class YAMLConfiguration {
+import org.yaml.snakeyaml.Yaml;
 
-	/*public YAMLConfiguration(String properties_file_path) {
-		
-		YamlReader reader = new YamlReader(new FileReader(properties_file_path));
-		Object object = reader.read();
-		Map map = (Map)object;
-		System.out.println(map.get("address"));
-	}*/
+public class YAMLConfiguration  implements ConfigurationProvider{
 	
-	/*public String get(String Key) {
-		
+	//Map<Object,Object> attribute to get all keys and values of .yaml file
+	private Map<Object,Object> result=null;
+	
+	
+	public YAMLConfiguration(String properties_file_path) {
+		try {
+			Yaml yaml = new Yaml();
+	       InputStream ios = new FileInputStream(properties_file_path);
+	       	// Parse the YAML file and return the output as a series of Maps and Lists
+	       	result = (Map<Object,Object>)yaml.load(ios);
+	    } catch (Exception e) {
+	       e.printStackTrace();
+	    }
 	}
-
+	//get value from .yaml file corresponding key
+	public String get(String Key) {
+		return result.get(Key).toString();
+	}
+	//get all keys from .yaml file 
 	public Set<Object> keys() {
-		
+		return result.keySet();
 	}
-
+	//get all values from .yaml file
 	public Collection<Object> values() {
-		
-	}*/
-
+		return  result.values();
+	}
+	
 	
 }

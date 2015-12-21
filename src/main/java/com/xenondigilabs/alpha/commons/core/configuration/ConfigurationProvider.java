@@ -6,7 +6,7 @@ import java.util.Set;
 
 public interface ConfigurationProvider {
 
-	String get(String Key);  //  return the value for `key`
+	String get(String Key);  //  return the value corresponding key
 	
 	Set<Object> keys(); // Return all keys
 	
