@@ -1,4 +1,4 @@
-package com.xenondigilabs.alpha.commons.core.logging;
+package com.xenondigilabs.xak.logging;
 
 import java.io.BufferedWriter;
 import java.io.File;

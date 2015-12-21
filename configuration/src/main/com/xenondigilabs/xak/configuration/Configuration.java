@@ -1,4 +1,4 @@
-package com.xenondigilabs.alpha.commons.core.configuration;
+package com.xenondigilabs.xak.configuration;
 
 import java.util.Properties;
 

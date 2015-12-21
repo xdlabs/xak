@@ -1,7 +1,6 @@
-package com.xenondigilabs.alpha.commons.core.configuration;
+package com.xenondigilabs.xak.configuration;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 public interface ConfigurationProvider {
