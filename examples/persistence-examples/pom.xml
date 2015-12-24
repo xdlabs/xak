@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.xenondigilabs.xak</groupId>
+        <artifactId>examples</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <groupId>com.xenondigilabs.xak.examples</groupId>
+    <artifactId>persistence-examples</artifactId>
+    <name>Persistence Examples</name>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>postgresql-persistence-example</module>
+    </modules>
+
+</project>
