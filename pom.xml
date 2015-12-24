@@ -15,7 +15,7 @@
         <module>logging</module>
         <module>persistence</module>
         <module>examples</module>
-          <module>commons</module>
+        <module>commons</module>
     </modules>
 
 </project>
