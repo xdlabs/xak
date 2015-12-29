@@ -38,16 +38,16 @@ public class Result {
 	
 	public boolean isSuccess()
 	{
-		if(status)
+		if(status==true)
 			return true;
 		return false;
 		
 	}
 	public boolean isError()
 	{
-		if(status)
-			return true;
-		return false;
+		if(status==true)
+			return false;
+		return true;
 	}
 	
 	
