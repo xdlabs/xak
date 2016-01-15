@@ -9,7 +9,6 @@ import java.io.IOException;
 public class FilelogAppender implements LogAppender{
 	
 	BufferedWriter bw =null; //To write log inside a file
-		
 	public FilelogAppender(String filepath)
 	{
 		try {

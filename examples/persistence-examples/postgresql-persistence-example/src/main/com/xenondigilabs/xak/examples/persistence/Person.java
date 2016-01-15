@@ -16,7 +16,7 @@ public class Person{
     String email_address = null;
 
     @Join
-    List<Person> friends = null;
+    List<Person>  friends = null;
 
     /**
      * Constructor initializes data menmbers.

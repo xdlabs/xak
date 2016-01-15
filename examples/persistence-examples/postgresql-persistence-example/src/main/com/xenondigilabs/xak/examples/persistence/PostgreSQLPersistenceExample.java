@@ -5,6 +5,7 @@ import com.xenondigilabs.xak.persistence.PersistenceService;
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
+
 import java.util.Collection;
 import java.util.Properties;
 
@@ -23,10 +24,14 @@ public class PostgreSQLPersistenceExample{
         // Create new properties configuration.
         Properties conf = new Properties();
 
-        String DB_HOST = args[0];
+        String DB_HOST = "localhost";
+        String DB_NAME = "postgres";
+        String DB_USER = "postgres";
+        String DB_PASS = "postgres";
+        /*String DB_HOST = args[0];
         String DB_NAME = args[1];
         String DB_USER = args[2];
-        String DB_PASS = args[3];
+        String DB_PASS = args[3];*/
 
         // Set configuration parameters
         conf.setProperty("datanucleus.schema.autoCreateTables", "true");
